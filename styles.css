@@ -1,0 +1,30 @@
+.board-font{
+  font-family: 'Teko', sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.board-font2{
+  text-transform:uppercase;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#frame{
+  transition:width 2s;
+}
+#frame.small{
+  width:3px;
+}
+#title span{
+  display:inline-block;
+  overflow:hidden;
+  border:1px solid lightgrey;
+  border-radius:.05em;
+  margin-right:1px;
+  transition:color 200ms ease-out;
+  text-align:center;
+  font-size:.8em;
+  height:1.2em;
+  width:.7em;
+  line-height:1.3;
+}
+#title .flip{color:red}
