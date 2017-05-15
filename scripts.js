@@ -18,7 +18,7 @@ $(function(){
       if (jQuery.inArray(el, input1) == -1){
         output.push(el);
       }
-		});
+    });
     return output;
   }
   function getLettersToAdd(input1,input2){
@@ -78,7 +78,7 @@ camera.addEventListener('change', function(e) {
   showImage();
   showLoader("Reading Image...");
   input1.value = '';
-  OCRAD(image, {filter:['number','letters','same_height']}, function(text){
+  /*OCRAD(image, {filter:['number','letters','same_height']}, function(text){
     //text = text.replace(/[\-\_\,\;\:]/g, '');
     //text = text.replace(/\W\W/g,'');
     message = "";
@@ -90,6 +90,12 @@ camera.addEventListener('change', function(e) {
     hideImage();
     hideLoader(message);
   });
+  */
+  setTimeout(function(){
+    document.getElementById('input1').value=OCRAD(image,{filter:'alpha'});
+    hideImage();
+    hideLoader();
+  },800);
 });
 
 function showLoader(text){
