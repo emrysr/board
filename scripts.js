@@ -42,17 +42,19 @@ $(function(){
   },10000);
   
   function initLetters(){
-    $title = $('#title');
-    text = $.trim($title.text());
-    newtext = "";
-    $.each(text.split(''),function(i,v){
-        className=Math.round(Math.random())==1?'flip':'';
-        newtext+="<span class='"+className+"'>"+v+"</span>";
-    })
-    $title.html(newtext);
+    $.each($('.letter-board'),function(){
+        $title = $(this);
+        text = $.trim($title.text());
+        newtext = "";
+        $.each(text.split(''),function(i,v){
+            className=Math.round(Math.random())==1?'flip':'';
+            newtext+="<span class='"+className+"'>"+v+"</span>";
+        })
+        $title.html(newtext);
+    });    
   }
   function animateTitle(){
-    $title = $('#title');
+    $title = $('.letter-board');
     $.each($title.find('span'),function(i,v){
        Math.round(Math.random())==1?$(this).toggleClass('flip'):'';
     })
