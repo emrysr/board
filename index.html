@@ -1,47 +1,55 @@
 
-<!DOCTYPE html><html class=''>
-<head>
+<!DOCTYPE html><html class='' lang="en">
+  <script src="https://use.fontawesome.com/3d135eecde.js"></script>
 <meta charset='UTF-8'><meta name="robots" content="noindex">
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Teko:600|Yanone+Kaffeesatz:700"rel="stylesheet"'>
 <link rel='stylesheet' href='styles.css'>
-<div class='container bg-inverse text-white'>
-    <h1 class="board-font letter-board title">★Today Only★</h1>
-    <h1 class="board-font letter-board text">LETTER BOARD SETTER 2PM<small class='text-muted'></small>
-    <h1 class="board-font letter-board title">★CellB.org★</h1>    
-  </h1>
-  <hr>
-  <form class='form row'>
-    <div class='col-md-6'>
-      <div class='form-group'>
-        <label>Already on board</label>
-        <input accept='image/*' capture id='camera' type='file'>
-        <input autofocus class='form-control form-control-lg board-font' id='input1' placeholder='already on the board' value='abc'>
+  <head>
+    <body>
+      <div class='container bg-inverse text-white'>
+        <h1 class="board-font letter-board title">★Today Only★</h1>
+        <h1 class="board-font letter-board text">LETTER BOARD SETTER 2PM<small class='text-muted'></small>
+        <h1 class="board-font letter-board title">★CellB.org★</h1>    
+      </h1>
+      <hr>
+      <form class='form row'>
+        <div class='col-md-6'>
+          <div class='form-group'>
+            <label>Already on board</label>
+            <input autofocus class='form-control board-font form-control-lg' id='input1' placeholder='already on the board' value='abc'>
+
+            <label class="custom-file">
+              <input accept='image/d*' capture id='camera' type='file' id="file" class="custom-file-input">
+              <span class="custom-file-control"></span>
+            </label>
+          </div>
+        </div>
+        <div class='col-md-6'>
+          <div class='form-group'>
+            <label>To go on the board</label>
+            <div class="input-group">
+              <input class='form-control form-control-lg board-font' id='input2' placeholder='to go on the board' value='cat'>
+              <span class="input-group-btn">
+                <button class='btn btn-sm btn-secondary' id='loadFeed'><span class="fa fa-film"></span></button>
+              </span>
+            </div>
+          </div>
       </div>
+      </form>
+      <div id='loader'></div>
+      <a download href='#'>
+        <img class='img-responsive' id='frame'>
+      </a>
+      <hr>
+      <h4>remove letters</h4>
+      expect B
+      <div id='output1'></div>
+      <h4>add letters</h4>
+      expect T
+      <div id='output2'></div>
+      <div id='titles'></div>
     </div>
-    <div class='col-md-6'>
-      <div class='form-group'>
-        <label>
-          To go on the board
-          <button class='btn btn-sm btn-secondary' id='loadFeed'>xml</button>
-        </label>
-        <input class='form-control form-control-lg board-font' id='input2' placeholder='to go on the board' value='cat'>
-      </div>
-    </div>
-  </form>
-  <div id='loader'></div>
-  <a download href='#'>
-    <img class='img-responsive' id='frame'>
-  </a>
-  <hr>
-  <h4>remove letters</h4>
-  expect B
-  <div id='output1'></div>
-  <h4>add letters</h4>
-  expect T
-  <div id='output2'></div>
-  <div id='titles'></div>
-</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="ocrad.js"></script>
